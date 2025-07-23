@@ -53,9 +53,17 @@ export function GameTimer({
     }
   }, [isActive, moveNumber]);
 
+  // Helper function to determine timer status class
+  const getTimerStatusClass = () => {
+    if (timeRemaining <= 0) return 'expired';
+    if (warningThreshold) return 'warning';
+    if (timeRemaining <= timeLimit * 0.5) return 'moderate';
+    return 'healthy';
+  };
+
   return (
     <div className="game-timer">
-      <div className={`timer-display ${warningThreshold ? 'warning' : ''}`}>
+      <div className={`timer-display ${getTimerStatusClass()}`}>
         <div className="time-remaining">
           <span className="timer-label">Time Remaining:</span>
           <span className="timer-value">{formatTime(timeRemaining)}</span>

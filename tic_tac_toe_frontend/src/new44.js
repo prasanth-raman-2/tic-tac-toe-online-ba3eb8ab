@@ -64,7 +64,17 @@ export class GamePerformance {
       score: 0,
       type: '',
       isCritical: false,
-      factors: []
+      factors: [],
+      threats: {
+        immediate: [],
+        potential: [],
+        defensive: []
+      },
+      opportunities: {
+        winning: [],
+        forking: [],
+        positioning: []
+      }
     };
 
     // Center control

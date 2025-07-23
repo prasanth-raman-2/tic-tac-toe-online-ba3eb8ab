@@ -5,6 +5,12 @@ export class GameMetrics {
       totalMoves: 0,
       averageMoveDuration: 0,
       movePatterns: new Map(),
+      patternAnalysis: {
+        openingMoves: new Map(),
+        midGamePatterns: new Map(),
+        closingSequences: new Map(),
+        successfulStrategies: new Map()
+      },
       playerStats: {
         X: {
           cornerMoves: 0,

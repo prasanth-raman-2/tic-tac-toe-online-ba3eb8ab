@@ -9,7 +9,10 @@ export class GameDifficulty {
         lookahead: 1,
         enableForks: false,
         useCorners: 0.3,
-        useCenter: 0.5
+        useCenter: 0.5,
+        patternRecognition: false,
+        defensivePlay: 0.2,
+        adaptiveStrategy: false
       },
       intermediate: {
         name: 'Intermediate',
