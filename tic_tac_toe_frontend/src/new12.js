@@ -1,8 +1,16 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
 // PUBLIC_INTERFACE
+/**
+ * Context for managing global game state
+ * Provides access to game history, current state, and player information
+ */
 export const GameStateContext = createContext();
 
+/**
+ * Initial state configuration for the game
+ * Defines default values for all game-related state
+ */
 const initialState = {
   history: [Array(9).fill(null)],
   stepNumber: 0,

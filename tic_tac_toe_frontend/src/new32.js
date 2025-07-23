@@ -1,6 +1,17 @@
 // PUBLIC_INTERFACE
+/**
+ * Tracks and analyzes user gameplay statistics
+ * Maintains historical data about wins, losses, playtime and strategies
+ */
 export class UserStatistics {
   constructor() {
+    /**
+     * Statistics tracking object containing:
+     * - Game outcomes (wins/losses/draws)
+     * - Timing metrics
+     * - Gameplay preferences
+     * - Performance trends
+     */
     this.stats = {
       gamesPlayed: 0,
       wins: 0,
